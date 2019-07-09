@@ -25,7 +25,6 @@ class T30Factory extends DataModelFactory {
             new TextVorlage()
         ]);
 
-        
         $dataModel->addReference('beziehungzureinrichtung.person -> person');
         $dataModel->addReference('beziehungzureinrichtung.einrichtung -> einrichtung');
 
