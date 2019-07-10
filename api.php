@@ -60,7 +60,7 @@ FlexApi::onSetup(function($request) {
     FlexAPI::guard()->allowCRUD('admin', 'CRUD', 'patenschaft', false);
 
     if (array_key_exists('fillInTestData', $request) && $request['fillInTestData']) {
-        $institutions = (array) json_decode(file_get_contents(__DIR__."/institutions.json"), true);
+        $institutions = (array) json_decode(file_get_contents(__DIR__."/test/data/institutions.json"), true);
         FlexAPI::superAccess()->insert('institution', $institutions);
     }
 
